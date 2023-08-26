@@ -1,3 +1,4 @@
+// import dependencies
 import renderElement from "./page-load";
 import homeModule from "./home-tab";
 import menuModule from "./menu-tab";
@@ -11,6 +12,7 @@ const tabButtons = {
 
 const contentDiv = document.getElementById("content");
 
+// event listeners
 tabButtons.home.addEventListener("click", (e) => {
     highlightTab(e);
     clearContent();
@@ -29,7 +31,7 @@ tabButtons.contact.addEventListener("click", (e) => {
     renderElement(contactModule());
 });
 
-
+// indicates active tab by adding class attribute and removes class for inactive tabs
 function highlightTab(e){
     e.target.setAttribute("class", "active");
     let otherBtns = [];
@@ -44,6 +46,5 @@ function highlightTab(e){
 function clearContent(){
     contentDiv.innerHTML = "";
 };
-
 
 tabButtons.home.click();
