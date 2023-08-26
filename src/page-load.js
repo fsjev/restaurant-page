@@ -1,8 +1,6 @@
 const renderElement = (element) => {
-    window.addEventListener("load", () => {
-        const contentDiv = document.getElementById("content");
-        contentDiv.appendChild(element);
-    });
+    const contentDiv = document.getElementById("content");
+    contentDiv.appendChild(element);
 };
 
 
