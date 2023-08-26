@@ -1,9 +1,7 @@
-// import renderElement from "./page-load";
-// import homeModule from "./home-tab";
-// import menuModule from "./menu-tab";
-// import contactModule from "./contact-tab";
-
-// renderElement(menuModule());
+import renderElement from "./page-load";
+import homeModule from "./home-tab";
+import menuModule from "./menu-tab";
+import contactModule from "./contact-tab";
 
 const tabButtons = {
     home: document.getElementById("home-tab"),
@@ -11,9 +9,25 @@ const tabButtons = {
     contact: document.getElementById("contact-tab")
 };
 
-tabButtons.home.addEventListener("click", highlightTab);
-tabButtons.menu.addEventListener("click", highlightTab);
-tabButtons.contact.addEventListener("click", highlightTab);
+const contentDiv = document.getElementById("content");
+
+tabButtons.home.addEventListener("click", (e) => {
+    highlightTab(e);
+    clearContent();
+    renderElement(homeModule());
+});
+
+tabButtons.menu.addEventListener("click", (e) => {
+    highlightTab(e);
+    clearContent();
+    renderElement(menuModule());
+});
+
+tabButtons.contact.addEventListener("click", (e) => {
+    highlightTab(e);
+    clearContent();
+    renderElement(contactModule());
+});
 
 
 function highlightTab(e){
@@ -24,6 +38,9 @@ function highlightTab(e){
             otherBtns.push(elem.childNodes[0]);
         };
     });
-    otherBtns.forEach(btn => btn.removeAttribute("class", "active"))
+    otherBtns.forEach(btn => btn.removeAttribute("class", "active"));
 };
 
+function clearContent(){
+    contentDiv.innerHTML = "";
+};
