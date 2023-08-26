@@ -1,7 +1,7 @@
 import "../designs/contact.css";
 
 const h1 = document.createElement("h1");
-headline.textContent = "Contact Us";
+h1.textContent = "Contact Us";
 
 
 const info = document.createElement("div");
@@ -39,3 +39,19 @@ const messageDiv = document.createElement("div");
 
 message.appendChild(messageSpan);
 message.appendChild(messageDiv);
+
+const contactElements = [];
+contactElements.push(h1);
+contactElements.push(info);
+contactElements.push(info2);
+contactElements.push(message);
+
+const contactModule = () => {
+    const div = document.createElement("div");
+    for(let elem of contactElements){
+        div.appendChild(elem);
+    };
+    return div;
+};
+
+export default contactModule;
