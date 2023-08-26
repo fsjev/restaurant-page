@@ -44,3 +44,6 @@ function highlightTab(e){
 function clearContent(){
     contentDiv.innerHTML = "";
 };
+
+
+tabButtons.home.click();
