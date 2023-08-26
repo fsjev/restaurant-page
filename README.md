@@ -1,1 +1,1 @@
-# As a mock restaurant website built almost entirely with JavaScript, this project serves to reinforce concepts learned from the Webpack documentation. Also, sufficient practice for JavaScript DOM manipulation but mostly dependency bundling and asset management with Webpack. 
+# As a mock restaurant website built almost entirely with JavaScript, this project serves to reinforce concepts learned from the Webpack documentation. Also, sufficient practice for JavaScript DOM manipulation but mostly dependency bundling and asset management with Webpack.
